@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/proxy-core/proxy-core.iml" filepath="$PROJECT_DIR$/proxy-core/proxy-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proxy-web/proxy-web.iml" filepath="$PROJECT_DIR$/proxy-web/proxy-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tonysfriend-ms-proxy.iml" filepath="$PROJECT_DIR$/tonysfriend-ms-proxy.iml" />
+    </modules>
+  </component>
+</project>
