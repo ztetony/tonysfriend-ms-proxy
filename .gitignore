@@ -7,3 +7,6 @@
 *.iml
 out
 gen
+/.idea/
+/proxy-core/target/
+/proxy-web/target/

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <router>
 	<action-package>
-		<package>com.cyfonly.nettice.examples.action</package>
+		<package>com.tonysfriend.ms.proxy.web.action</package>
 	</action-package>
 	
 	<namespaces>

@@ -1,6 +1,7 @@
 package com.tonysfriend.ms.proxy.web.action;
 
 import com.tonysfriend.ms.proxy.core.BaseAction;
+import com.tonysfriend.ms.proxy.core.annotation.Namespace;
 import com.tonysfriend.ms.proxy.core.annotation.Read;
 import com.tonysfriend.ms.proxy.core.ret.Render;
 import com.tonysfriend.ms.proxy.core.ret.RenderType;
@@ -12,7 +13,9 @@ import com.tonysfriend.ms.proxy.core.ret.RenderType;
 public class ApplicationClientAction extends BaseAction {
 
     //client proxy
-    public Render proxy(@Read(key = "msapi", defaultValue = "http://computer-service:8888/api/group/xxx") String msapi, @Read(key = "method") String method) {
+    //使用 @Namespace 注解
+    @Namespace("/proxy/call/")
+    public Render call(@Read(key = "msapi", defaultValue = "http://computer-service:8888/api/group/xxx") String msapi, @Read(key = "method") String method) {
         System.out.println("Receive parameters: msapi=" + msapi + ",method=" + method );
         //parse msapi --> get app (ZIOT.DMS.1.0.0.DAILY)
 
