@@ -18,6 +18,7 @@ import com.tonysfriend.ms.util.PropertiesUtil;
 import com.tonysfriend.ms.util.RestTemplate;
 import com.tonysfriend.ms.util.StringUtil;
 import org.slf4j.LoggerFactory;
+
 import java.util.Map;
 
 /**
@@ -53,7 +54,7 @@ public class ApplicationClientAction extends BaseAction {
             ApplicationClientServiceImpl client = new ApplicationClientServiceImpl();
             String eureka = PropertiesUtil.getProperty("eureka.client.serviceUrl.defaultZone");
 
-            Result<InstanceId> instanceResult = client.getInstance(eureka + "/apps/" + vipAddress, 5 * 1000);
+            Result<InstanceId> instanceResult = client.getInstance(eureka + "/apps/" + vipAddress, vipAddress, 5 * 1000);
             InstanceId instanceId = instanceResult.getData();
             String factUrl = "http://" + instanceId.getHost() + ":" + instanceId.getPort() + u_r_i;
 
